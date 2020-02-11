@@ -34,7 +34,7 @@ pipeline {
 
     stage('Terraform Planning for Checking') {
       steps {
-        sh 'cd terraform/environments/dev && terraform plan --detailed-exitcode -input=false || ([ "$?" -eq "2" ] && exit 0);'
+        sh 'cd terraform/env/dev && terraform plan --detailed-exitcode -input=false || ([ "$?" -eq "2" ] && exit 0);'
       }
       post {
         failure {
@@ -69,7 +69,7 @@ pipeline {
       }
 
       steps {
-        sh 'cd terraform/environments/${Environment} && terraform apply -input=false -auto-approve'
+        sh 'cd terraform/env/${Environment} && terraform apply -input=false -auto-approve'
       }
 
       post {

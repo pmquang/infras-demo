@@ -1,3 +1,15 @@
+variable "role_arn" {
+  description = "Export your TF_VAR_role_arn to run terraform"
+  type        = string
+  default     = "xxxxxxxxxxxx"
+}
+
+variable "external_id" {
+  description = "Export your TF_VAR_external_id to run terraform"
+  type        = string
+  default     = "xxxxxxxxxxxx"
+}
+
 provider "aws" {
   version = "2.17.0"
   region = "ap-southeast-1"
