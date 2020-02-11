@@ -1,0 +1,38 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:PutImageTagMutability",
+                "ecr:ListTagsForResource",
+                "ecr:UploadLayerPart",
+                "ecr:BatchDeleteImage",
+                "ecr:ListImages",
+                "ecr:DeleteRepository",
+                "ecr:CompleteLayerUpload",
+                "ecr:TagResource",
+                "ecr:DescribeRepositories",
+                "ecr:DeleteRepositoryPolicy",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetLifecyclePolicy",
+                "ecr:PutLifecyclePolicy",
+                "ecr:GetLifecyclePolicyPreview",
+                "ecr:CreateRepository",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:GetAuthorizationToken",
+                "ecr:DeleteLifecyclePolicy",
+                "ecr:PutImage",
+                "ecr:UntagResource",
+                "ecr:SetRepositoryPolicy",
+                "ecr:BatchGetImage",
+                "ecr:DescribeImages",
+                "ecr:StartLifecyclePolicyPreview",
+                "ecr:InitiateLayerUpload",
+                "ecr:GetRepositoryPolicy"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

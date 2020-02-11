@@ -1,0 +1,82 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:GetLifecyclePolicyPreview",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage",
+        "ecr:DescribeImages",
+        "ecr:DescribeRepositories",
+        "ecr:ListTagsForResource",
+        "ecr:ListImages",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetRepositoryPolicy",
+        "ecr:GetLifecyclePolicy"
+      ],
+      "Resource": "arn:aws:ecr:*:*:repository/*"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "elasticloadbalancing:DescribeTargetHealth",
+        "ecr:GetAuthorizationToken"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "VisualEditor3",
+      "Action": [
+        "sts:AssumeRole"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams",
+        "logs:CreateLogGroup"
+      ],
+      "Resource": [
+        "arn:aws:logs:*:*:*"
+      ]
+    },
+    {
+      "Sid": "VisualEditor4",
+      "Action": [
+          "ec2:DescribeSpotInstanceRequests",
+          "ec2:CancelSpotInstanceRequests",
+          "ec2:GetConsoleOutput",
+          "ec2:RequestSpotInstances",
+          "ec2:RunInstances",
+          "ec2:StartInstances",
+          "ec2:StopInstances",
+          "ec2:TerminateInstances",
+          "ec2:CreateTags",
+          "ec2:DeleteTags",
+          "ec2:DescribeInstances",
+          "ec2:DescribeKeyPairs",
+          "ec2:DescribeRegions",
+          "ec2:DescribeImages",
+          "ec2:DescribeAvailabilityZones",
+          "ec2:DescribeSecurityGroups",
+          "ec2:DescribeSubnets",
+          "iam:ListInstanceProfilesForRole",
+          "iam:PassRole",
+          "iam:CreateServiceLinkedRole",
+          "ec2:DescribeSpotPriceHistory",
+          "ec2:GetPasswordData"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
