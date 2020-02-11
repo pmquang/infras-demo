@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Terraform Init Modules') {
       steps {
-        sh 'cd terraform/environments/dev/ && terraform init -backend-config="role_arn=arn:aws:iam::${AWS_ACCOUNT_ID}:role/${TF_VAR_role_arn}" -backend-config="external_id=${TF_VAR_external_id}"'
+        sh 'cd terraform/env/dev/ && terraform init -backend-config="role_arn=arn:aws:iam::${AWS_ACCOUNT_ID}:role/${TF_VAR_role_arn}" -backend-config="external_id=${TF_VAR_external_id}"'
       }
       post {
         failure {
