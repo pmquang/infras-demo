@@ -10,7 +10,7 @@ pipeline {
   environment {
     TF_VAR_role_arn    = credentials('TF_VAR_role_arn')
     TF_VAR_external_id = credentials('TF_VAR_external_id')
-    TF_VAR_flux_ssh_key = credentials('flux-ssh.key')
+    TF_VAR_flux_ssh_key = credentials('TF_VAR_flux_ssh_key')
   }
 
   stages {
