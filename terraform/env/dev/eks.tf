@@ -115,7 +115,7 @@ resource "kubernetes_secret" "flux-ssh" {
   }
 
   data = {
-    identity = var.flux_ssh_key
+    identity = base64decode(var.flux_ssh_key)
   }
 
   depends_on = [ "module.tiller" ]
