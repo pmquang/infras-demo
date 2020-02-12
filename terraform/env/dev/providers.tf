@@ -10,8 +10,14 @@ variable "external_id" {
   default     = "xxxxxxxxxxxx"
 }
 
+variable "flux_ssh_key" {
+  description = "Export your TF_VAR_flux_ssh_key to run terraform"
+  type        = string
+  default     = "xxxxxxxxxxxx"
+}
+
 provider "aws" {
-  version = "2.17.0"
+  version = "2.44.0"
   region = "ap-southeast-1"
   assume_role {
     role_arn = "arn:aws:iam::${local.account_id}:role/${var.role_arn}"

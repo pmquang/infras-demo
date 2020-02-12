@@ -1,0 +1,9 @@
+image:
+  repository: docker.io/fluxcd/flux
+  tag: 1.18.0
+  pullPolicy: IfNotPresent
+
+git:
+  url: "git@github.com:pmquang/infras-flux-demo.git"
+  branch: "master"
+  secretName: "flux-ssh"

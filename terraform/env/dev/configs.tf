@@ -65,6 +65,31 @@ locals {
     awslog_stream             = "jenkins"
   }
 
+  eks = {
+    name                      = "${local.name}-eks"
+    cluster_version           = "1.14"
+    node_groups_defaults      = {
+      ami_type  = "AL2_x86_64"
+      disk_size = 50
+    }
+
+    node_groups = {
+      nodegroup01 = {
+        desired_capacity = 5
+        max_capacity     = 20
+        min_capacity     = 1
+
+        instance_type = "c5.2xlarge"
+        k8s_labels = {
+          Environment = local.env
+        }
+        additional_tags = {
+          ExtraTag = "${local.name}-eks-nodegroup01"
+        }
+      }
+    }
+  }
+
   tags = {
     Owner       = "quang.pham"
     Environment = local.env
