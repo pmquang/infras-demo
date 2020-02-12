@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image '${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-1.amazonaws.com/internal/terraform:0.12.8-alpine-3.10-awscli-1.16.279'
+      image '${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-1.amazonaws.com/internal/terraform:0.12.8.1-alpine-3.10-awscli-1.16.279'
       registryUrl 'https://${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-1.amazonaws.com/'
       args '--privileged -v $DOCKER_CONFIG/:/root/.docker/'
     }
